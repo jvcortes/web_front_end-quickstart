@@ -304,12 +304,12 @@ a:active {
   font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
   text-transform: var(--section-tagline-transform);
-  margin: 0;
+  margin: var(--section-tagline-margin);
 }
 
 ul.row {
   margin: 0;
-  padding: none;
+  padding: 0;
   list-style: none;
 }
 
@@ -342,7 +342,7 @@ ul.row {
 }
 
 .footer-copyright {
-  margin: none;
+  margin: 0;
   font-size: var(--font-size-small);
   color: var(--text-color);
 }
