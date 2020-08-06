@@ -314,9 +314,8 @@ ul.row {
 }
 
 .row::after {
-  content: none;
   display: table;
-  float: none;
+  clear: both;
 }
 
 .col-1-3 {
