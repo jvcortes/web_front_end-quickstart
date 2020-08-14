@@ -1,0 +1,15 @@
+/* Sets a 14px font size for the body elements.
+/* Sets a 16px font size for h1 elements inside body elements.
+/* Sets a 12px font size for h1 smaller class elements inside body elements. */
+
+body {
+  font-size: 14px;
+
+  h1 {
+    font-size: 16px;
+
+    &.smaller {
+      font-size: 12px;
+    }
+  }
+}
