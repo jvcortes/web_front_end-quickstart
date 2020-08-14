@@ -1,0 +1,19 @@
+/* Sets a 12px font size for the info class elements.
+ * Sets #00FF00 as the text color for the success class elements that extend
+ * from the info class.
+ * Sets #FF0000 as the text color for the warning class elements that extend
+ * from the info class. */
+
+.info {
+  font-size: 12px;
+}
+
+.success {
+  @extend .info;
+  color: #00FF00;
+}
+
+.warning {
+  @extend .info;
+  color: #FF0000;
+}
