@@ -1,0 +1,15 @@
+/* Sets a 10px side margin to the body elements
+ * Sets a 15px side margin to the div elements */
+
+@mixin side-margins($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+body {
+  @include side-margins(10px);
+}
+
+div {
+  @include side-margins(15px):
+}
