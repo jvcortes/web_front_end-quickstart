@@ -11,5 +11,5 @@ body {
 }
 
 div {
-  @include side-margins(15px):
+  @include side-margins(15px);
 }
