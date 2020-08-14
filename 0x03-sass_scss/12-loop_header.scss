@@ -1,0 +1,8 @@
+/* Creates a rule for each one of the levels from h1 to h5 containing a font
+ * size property of 1 to 5px */
+
+@for $i from 1 through 5 {
+  h#{$i} {
+    font-size: #{$i}px;
+  }
+}
