@@ -1,0 +1,10 @@
+/* Sets #3D3D3D as the text color for the body elements *
+/* Sets #FF0000 as the text color for red class elements inside body elements */
+
+body {
+  color: #3D3D3D;
+
+  .red {
+    color: #FF0000;
+  }
+}
