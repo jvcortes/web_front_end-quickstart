@@ -1,0 +1,11 @@
+/* Sets #3D3D3D as the text color for the body elements *
+/* Sets #FF0000 as the text color for red class first child elements inside
+ * body elements */
+
+body {
+  color: #3D3D3D;
+
+  .red:first-child {
+    color: #FF0000;
+  }
+}
