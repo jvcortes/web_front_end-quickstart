@@ -1,0 +1,10 @@
+/* Sets #FF0000 as the text color for the button elements.
+ * Sets #00FF00 as the text color for hovered button elements. */
+
+button {
+  color: #FF0000;
+
+  :hover {
+    color: #00FF00;
+  }
+}
