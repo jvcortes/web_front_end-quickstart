@@ -1,0 +1,54 @@
+/* Creates a rule that sorts a list of strings */
+@import "103-sort_list";
+
+$default-sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z
+!default;
+
+@function compare($a, $b, $order: $default-sort-order) {
+  $a: to-lower-case($a + unquote($a));
+  $b: to-lower-case($b + unquote($b));
+  $char-a: null;
+  $char-b: null;
+
+  @for $i from 1 through min(str-length($a), str-length($b)) {
+    $char-a: str-slice($a, $i, $i);
+    $char-b: str-slice($b, $i, $i);
+
+    @if $char-a and $char-b and index($order, $char-a) != index($order, $char-b) {
+      @return index($order, $char-a) - index($order, $char-b);
+    }
+  }
+
+  @return index($order, $char-a) - index($order, $char-b);
+}
+
+@function swap($list, $index-a, $index-b) {
+  @if abs($index-a) > length($list) or abs($index-b) > length($list) {
+    @return $list;
+  }
+
+  $tmp: nth($list, $index-a);
+  $list: set-nth($list, $index-a, nth($list, $index-b));
+  $list: set-nth($list, $index-b, $tmp);
+  @return $list;
+}
+
+@function sort($list, $order) {
+  $cap: length($list);
+
+  @while $cap > 1 {
+    @for $i from 1 to $cap {
+      @if compare(nth($list, $i), nth($list, $i + 1), $default-sort-order) > 0 {
+        $list: swap($list, $i, $i + 1);
+      }
+    }
+    $cap: $cap - 1;
+  }
+  @return $list;
+}
+
+.class {
+  $list: $list_to_sort;
+  $sorted: sort($list, $default-sort-order);
+  @debug $sorted;
+}
