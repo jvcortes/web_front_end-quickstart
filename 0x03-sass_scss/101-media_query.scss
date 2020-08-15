@@ -1,0 +1,10 @@
+/* Sets a 20px font size for the h1 tags.
+ * Sets a 14px font size for the h1 tags for vieports under 320px */
+
+h1 {
+  font-size: 20px;
+
+  @media screen and (max-width: '320px') {
+    font-size: 14px;
+  }
+}
