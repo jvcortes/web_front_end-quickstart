@@ -1,0 +1,24 @@
+/* Sets a 20px font size for h1 elements.
+ * Sets a 18px font size for h1 elements for screens under 960px.
+ * Sets a 16px font size for h1 elements for screens under 640px.
+ * Sets a 14px font size for h1 elements for screens under 320px.
+ * Sets a #1D1D1D text color for the h1 elements with the small class for
+ * screens under 320px. */
+h1 {
+  font-size: 20px;
+
+  @media screen and (max-width: 960px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 320px) {
+    font-size: 14px;
+    &.small {
+      color: #1D1D1D;
+    }
+  }
+}
