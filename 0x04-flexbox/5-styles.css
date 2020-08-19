@@ -400,10 +400,12 @@ ul.row {
 
 /* Header
       ============================= */
-
-.header {
+.header-container {
   display: flex;
   justify-content: space-between;
+}
+
+.header {
   padding: var(--header-padding);
   position: relative;
   z-index: 3;
