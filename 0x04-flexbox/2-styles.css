@@ -527,11 +527,13 @@ ul.row {
 }
 
 /* Section Latest news ============================= */
-/*** 4. CARD ***/
 
 .section-latest-news .row {
   flex-direction: row-reverse;
 }
+
+/*** 4. CARD ***/
+
 
 /* Card (all styles)
       ============================= */
