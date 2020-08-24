@@ -554,6 +554,22 @@ ul.row {
   fill: var(--text-color);
 }
 
+@media only screen and (max-width: 767px) {
+  :root {
+    --footer-padding: 5rem 2rem 1rem;
+  }
+
+  .footer .social.nav,
+  .footer .footer-nav {
+    text-align: center;
+  }
+
+  .social.nav li + li,
+  .footer-nav li + li {
+    padding-left: 2rem;
+  }
+}
+
 /*** 3. SECTION ***/
 
 /* Section (all styles)
@@ -649,6 +665,11 @@ ul.row {
 
 .section-hero .section-body {
   padding: 2rem;
+}
+
+.article-page .section-hero {
+  margin-top: -8.5rem;
+  padding-top: 5rem;
 }
 
 /* Section Latest news
@@ -750,6 +771,21 @@ ul.row {
 
 .card-work:hover .card-title {
   opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .card-work .card-inner {
+    color: var(--color-white);
+    position: relative;
+  }
+
+  .card-work .card-title {
+    opacity: 1;
+  }
+
+  .card-work .card-title a {
+    padding: 2rem 1rem 0 1rem;
+  }
 }
 
 /* Card SERVICES
