@@ -204,14 +204,18 @@
               <p>Stay updated with our latest trends</p>
               <form action="#" method="post">
                 <div class="input-group">
+                  <label class="visually-hidden" for="email"></label>
                   <input
+                    id="email"
                     class="form-control"
-                    type="text"
+                    type="email"
                     name="email"
-                    placeholder="Enter Email Address"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
                   />
                   <div class="input-group-btn">
-                    <a class="btn" type="submit">Validate</a>
+                    <button class="btn" type="submit">Validate</a>
                   </div>
                 </div>
               </form>
