@@ -56,7 +56,7 @@
             }).then(function (response) {
               let result = response.query.search;
               for (let i = 0; i < result.length; i++) {
-                addNewArticle(result[i].id, result[i].title, result[i].snippet);
+                addNewArticle(result[i].pageid, result[i].title, result[i].snippet);
               }
             });
 
