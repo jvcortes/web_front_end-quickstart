@@ -8,7 +8,7 @@
       crossorigin="anonymous"
       type="application/javascript"
     ></script>
-    <title>Task 10</title>
+    <title>Task 11</title>
     <style type="text/css" media="screen">
       .loading {
         opacity: 0.2;
@@ -20,17 +20,23 @@
       window.onload = function () {
         function addPostRow(data) {
           $("body").after(
-            `
-            <p><span>Post created with id ${data.id}, title:
+          `
+            <p id="row-${data.id}">
+              <span id="delete-${data.id}">(delete)
+              <span>Post created with id ${data.id}, title:
             ${data.title} author: ${data.author}
           `
           );
+
+          $(`span#delete-${data.id}`).click(function () {
+            deletePost(data.id)
+          });
         }
 
         function listPosts() {
           fetch("http://localhost:3000/posts")
             .then(function (response) {
-              if (response.status == 200) {
+              if (response.ok) {
                 return response.json();
               } else {
                 alert("Server Error");
@@ -41,6 +47,20 @@
                 addPostRow(item);
               }
             });
+        }
+
+        function deletePost (id) {
+          fetch(`http://localhost:3000/posts/${id}`, {
+            method: "DELETE",
+          })
+          .then(function (response) {
+            if (response.ok) {
+              $(`p#row-${id}`).remove();
+            } else {
+              alert("Post was not deleted");
+            }
+          })
+
         }
 
         function buildForm() {
